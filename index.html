@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星辰超市 - Discord 社群</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="星辰超市 Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#features">功能介紹</a></li>
+                <li><a href="#register">註冊</a></li>
+                <li><a href="#about">作者介紹</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>歡迎來到星辰超市</h1>
+            <p>加入我們的 Discord 社群，探索更多有趣的機器人功能！</p>
+            <a href="#register" class="cta-button">立即註冊</a>
+        </section>
+
+        <section id="features">
+            <h2>機器人功能介紹</h2>
+            <p>我們的 Discord 機器人能夠提供多種實用功能，幫助你管理社群並提升互動！</p>
+        </section>
+
+        <section id="register">
+            <h2>用戶註冊</h2>
+            <p>選擇以下方式註冊：</p>
+            <button onclick="discordLogin()">通過 Discord 登入</button>
+            <button onclick="showRegistrationForm()">普通註冊</button>
+        </section>
+
+        <section id="about">
+            <h2>作者介紹</h2>
+            <img src="{{ url_for('static', filename='avatar.png') }}" alt="作者頭像">
+            <p>這裡是你的個人背景介紹，分享你的故事與社群的願景。</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 星辰超市. 版權所有.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
